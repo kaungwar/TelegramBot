@@ -16,19 +16,6 @@ from config import TOKEN, DATA_DIR, PRODUCTS_FILE, TABLES_FILE, ORDERS_FILE, ADM
 from config import ADD_PRODUCT, ADD_TABLE, EDIT_PRODUCT, EDIT_TABLE, INPUT_QTY
 
 
-
-# Conversation states
-ADD_PRODUCT, ADD_TABLE, EDIT_PRODUCT, EDIT_TABLE, INPUT_QTY = range(5)
-
-# Data storage
-DATA_DIR = "data"
-os.makedirs(DATA_DIR, exist_ok=True)
-
-PRODUCTS_FILE = os.path.join(DATA_DIR, "products.json")
-TABLES_FILE = os.path.join(DATA_DIR, "tables.json")
-ORDERS_FILE = os.path.join(DATA_DIR, "orders.json")
-ADMINS_FILE = os.path.join(DATA_DIR, "admins.json")
-
 # Initialize logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
