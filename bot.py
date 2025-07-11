@@ -1,13 +1,7 @@
 import logging
 import json
-import os
 from datetime import datetime
-from telegram import (
-    Update,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    ReplyKeyboardRemove
-)
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -18,8 +12,10 @@ from telegram.ext import (
     ConversationHandler
 )
 
-# Bot configuration - REPLACE WITH YOUR BOT TOKEN
-TOKEN = "8125456481:AAHc4rKgReAcgs8hE_SmefNYuhAX0e4NjWc"
+from config import TOKEN, DATA_DIR, PRODUCTS_FILE, TABLES_FILE, ORDERS_FILE, ADMINS_FILE
+from config import ADD_PRODUCT, ADD_TABLE, EDIT_PRODUCT, EDIT_TABLE, INPUT_QTY
+
+
 
 # Conversation states
 ADD_PRODUCT, ADD_TABLE, EDIT_PRODUCT, EDIT_TABLE, INPUT_QTY = range(5)
